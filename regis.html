@@ -4,151 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi PPDB Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary-pink: #ff85a2;
-            --light-pink: #fce4ec;
-            --dark-pink: #f06292;
-            --white: #ffffff;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light-pink);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: linear-gradient(135deg, #fce4ec 0%, #f06292 100%);
             min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 500px;
-        }
-
-        h2 {
-            color: var(--dark-pink);
-            text-align: center;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--primary-pink);
-            padding-bottom: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-sizing: border-box; /* Biar padding tidak nambah lebar */
-            transition: border-color 0.3s;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: var(--primary-pink);
-            box-shadow: 0 0 5px rgba(255, 133, 162, 0.5);
-        }
-
-        .btn-submit {
-            background-color: var(--primary-pink);
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background 0.3s;
-            margin-top: 10px;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--dark-pink);
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
+<body class="p-6">
 
-<div class="container">
-    <h2>Registrasi PPDB Online</h2>
-    <form action="#" method="POST">
-        
-        <div class="form-group">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+    <div class="bg-white/90 backdrop-blur-sm shadow-2xl rounded-2xl p-8 w-full max-w-lg border border-pink-100">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-pink-600">Registrasi PPDB</h1>
+            <p class="text-pink-400 text-sm">Tahun Ajaran 2026/2027</p>
+            <div class="h-1 w-20 bg-pink-500 mx-auto mt-2 rounded-full"></div>
         </div>
 
-        <div class="form-group">
-            <label for="nisn">NISN</label>
-            <input type="text" id="nisn" name="nisn" placeholder="Nomor Induk Siswa Nasional" required>
-        </div>
+        <!-- Form -->
+        <form action="#" method="POST" class="space-y-5">
+            
+            <!-- Nama Lengkap -->
+            <div>
+                <label class="block text-sm font-semibold text-pink-700 mb-1">Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan nama sesuai ijazah" 
+                    class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none transition">
+            </div>
 
-        <div class="form-group">
-            <label for="jk">Jenis Kelamin</label>
-            <select id="jk" name="jk" required>
-                <option value="">-- Pilih Jenis Kelamin --</option>
-                <option value="L">Laki-laki</option>
-                <option value="P">Perempuan</option>
-            </select>
-        </div>
+            <!-- NISN & Email -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-pink-700 mb-1">NISN</label>
+                    <input type="number" placeholder="10 digit NISN" 
+                        class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-pink-700 mb-1">Jenis Kelamin</label>
+                    <select class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none transition">
+                        <option value="">Pilih...</option>
+                        <option value="L">Laki-laki</option>
+                        <option value="P">Perempuan</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="asal_sekolah">Asal Sekolah</label>
-            <input type="text" id="asal_sekolah" name="asal_sekolah" placeholder="SMP Asal" required>
-        </div>
+            <!-- Asal Sekolah -->
+            <div>
+                <label class="block text-sm font-semibold text-pink-700 mb-1">Asal Sekolah</label>
+                <input type="text" placeholder="Nama sekolah sebelumnya" 
+                    class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none transition">
+            </div>
 
-        <div class="form-group">
-            <label for="email">Email Aktif</label>
-            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
-        </div>
+            <!-- Email -->
+            <div>
+                <label class="block text-sm font-semibold text-pink-700 mb-1">Email Aktif</label>
+                <input type="email" placeholder="contoh:andin@email.com" 
+                    class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none transition">
+            </div>
 
-        <div class="form-group">
-            <label for="wa">Nomor WhatsApp</label>
-            <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" required>
-        </div>
+            <!-- Tombol Submit -->
+            <button type="submit" 
+                class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-xl shadow-lg transform hover:scale-[1.02] transition-all duration-200 mt-4">
+                Daftar Sekarang
+            </button>
 
-        <div class="form-group">
-            <label for="alamat">Alamat Lengkap</label>
-            <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat rumah sekarang"></textarea>
-        </div>
+        </form>
 
-        <button type="submit" class="btn-submit">Daftar Sekarang</button>
-        
-    </form>
-    
-    <div class="footer">
-        &copy; 2026 Sistem PPDB Online - Daftar sekarang juga
+        <!-- Footer Form -->
+        <p class="text-center text-xs text-pink-400 mt-6">
+            Sudah punya akun? <a href="#" class="font-bold underline">Login di sini</a>
+        </p>
     </div>
-</div>
 
 </body>
 </html>
