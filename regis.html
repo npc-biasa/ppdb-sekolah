@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi PPDB Online</title>
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --light-pink: #fce4ec;
+            --dark-pink: #f06292;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-pink);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            color: var(--dark-pink);
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--primary-pink);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box; /* Biar padding tidak nambah lebar */
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 5px rgba(255, 133, 162, 0.5);
+        }
+
+        .btn-submit {
+            background-color: var(--primary-pink);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--dark-pink);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registrasi PPDB Online</h2>
+    <form action="#" method="POST">
+        
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nisn">NISN</label>
+            <input type="text" id="nisn" name="nisn" placeholder="Nomor Induk Siswa Nasional" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jk">Jenis Kelamin</label>
+            <select id="jk" name="jk" required>
+                <option value="">-- Pilih Jenis Kelamin --</option>
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="asal_sekolah">Asal Sekolah</label>
+            <input type="text" id="asal_sekolah" name="asal_sekolah" placeholder="SMP Asal" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Aktif</label>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="wa">Nomor WhatsApp</label>
+            <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" required>
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat Lengkap</label>
+            <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat rumah sekarang"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Daftar Sekarang</button>
+        
+    </form>
+    
+    <div class="footer">
+        &copy; 2026 Sistem PPDB Online - Daftar sekarang juga
+    </div>
+</div>
+
+</body>
+</html>
