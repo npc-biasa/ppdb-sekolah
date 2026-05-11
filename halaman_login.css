@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffd6e7, #ffb6d9);
+}
+
+.login-box{
+  background: white;
+  width: 350px;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-box h2{
+  margin-bottom: 10px;
+  color: black;
+}
+
+.login-box p{
+  margin-bottom: 25px;
+  color: gray;
+  font-size: 14px;
+}
+
+.input-box{
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-box label{
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-box input{
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #ffc0d9;
+  border-radius: 8px;
+  outline: none;
+}
+
+.input-box input:focus{
+  border-color: #ff8fc2;
+}
+
+.btn{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9ecf;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  background: #ff7eb8;
+}
+
+.footer{
+  margin-top: 15px;
+  font-size: 13px;
+  color: gray;
+}
